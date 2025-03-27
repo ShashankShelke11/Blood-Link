@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard - Blood Link</title>
+    <link rel="stylesheet" href="donor_dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Donor Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <!-- Donor Registration Form -->
+        <div class="dashboard-section">
+            <h3>Register for Blood Donation</h3>
+            <form id="donor-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+
+                <label for="blood-group">Blood Group</label>
+                <select id="blood-group" required>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="O+">O+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="O-">O-</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="aadhar">Upload Aadhar Card (Optional)</label>
+                <input type="file" id="aadhar" accept=".jpg, .jpeg, .png" />
+
+                <label for="medical-history">Any Prior Diseases/Medical Conditions</label>
+                <textarea id="medical-history" rows="4" placeholder="Please mention any prior medical conditions"></textarea>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+        </div>
+
+        <!-- Available Locations (Hospitals & Blood Banks) -->
+        <div class="dashboard-section">
+            <h3>Available Locations for Blood Donation</h3>
+            <table id="locations-table">
+                <thead>
+                    <tr>
+                        <th>Location Name</th>
+                        <th>Type</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data for available hospitals/blood banks will go here -->
+                    <tr>
+                        <td>City Blood Bank</td>
+                        <td>Blood Bank</td>
+                        <td>123 Main Street, City</td>
+                        <td>+1234567890</td>
+                    </tr>
+                    <tr>
+                        <td>Central Hospital</td>
+                        <td>Hospital</td>
+                        <td>456 Hospital Road, City</td>
+                        <td>+0987654321</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="donor_dashboard.js"></script>
+</body>
+</html>
