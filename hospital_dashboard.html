@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Blood Management Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-section">
+            <h2>Blood Inventory</h2>
+            <table id="blood-inventory">
+                <thead>
+                    <tr>
+                        <th>Blood Type</th>
+                        <th>Quantity (Units)</th>
+                        <th>Last Donated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Blood inventory data will be inserted dynamically -->
+                </tbody>
+            </table>
+
+            <h3>History of Blood Given</h3>
+            <table id="blood-history">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Recipient</th>
+                        <th>Blood Type</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Blood donation history will be inserted dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Search Nearby Blood Banks</h2>
+            <div class="filters">
+                <label for="blood-type">Blood Type:</label>
+                <select id="blood-type">
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="O+">O+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="O-">O-</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="blood-age">Max Age (Days):</label>
+                <input type="number" id="blood-age" value="30" max="365">
+                
+                <button id="search-blood">Search Blood Banks</button>
+            </div>
+
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
